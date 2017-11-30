@@ -1,15 +1,5 @@
-import "babel-polyfill";
+import React from 'react';
+import ReactDom from 'react-dom'
+import Intro from './Intro.jsx'
 
-// let the magic begin
-import Vue from 'vue';
-import Intro from './Intro.vue';
-
-
-// the main component
-new Vue({
-    el:"#main",
-    components:{
-        'intro-guy':Intro
-    },
-    template: `<intro-guy></intro-guy>`
-})
+ReactDom.render(<Intro></Intro>, document.getElementById('main'));
